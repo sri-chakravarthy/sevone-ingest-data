@@ -1,0 +1,20 @@
+{
+    "ApplianceDetails": [
+        {
+            "IPAddress": "c29073v1.fyre.ibm.com",
+            "UserName": "admin",
+            "Password": {
+                "EncryptedPwd": "gAAAAABntXDxMG47FQrqItF89-kCLw39rNdADyFW6oJgUHq4WvgoOFajsK-G7ArvvzchZ3MHjvalOnoRhufpR-6zzXtrIa7X8Q=="
+            },
+            "sshUserName": "root",
+            "sshPassword": {
+                "EncryptedPwd": "gAAAAABntXDx843QLJW6fxaMKXspao6SjGRAFf5wQO8F0GJe2a1SV0CMrbYrAIkWSMlOz14G5kza1QHMFREEuTs9GHkFKswJTQ=="
+            },
+            "UseSShKeys": 1,
+            "Type": "NMS"
+        }
+    ],
+    "LogLevel": "DEBUG",
+    "MaxLogFileSize": "10485760"
+   
+}
