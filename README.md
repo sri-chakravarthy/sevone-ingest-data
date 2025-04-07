@@ -26,10 +26,30 @@ To ingest data, the following needs to be done
         If value is 0, then username/pwd will be required to login
     "Type": "NMS"
 
-    If you want to ingest data for one device, use the below in your main function
+    If you want to ingest data for one device, The ObjectList for the device should be as below
 
 ```json
-objectDict = {
+objectList = [{
+                "automaticCreation": True,
+                "description": "Group members Count Metrics",
+                "name": ShortDevGroupPath,
+                "pluginName": "DEFERRED",
+                "timestamps": [
+                    {
+                    "indicators": [
+                        {
+                        "format": "GAUGE",
+                        "name": "No of Stations",
+                        "units": "Number",
+                        "value": deviceGroupDict[group_id]["NoOfStations"]
+                        }
+                    ],
+                    "timestamp": timestamp
+                    }
+                ],
+                    "type": "Device Group Counts"
+            },
+            {
                 "automaticCreation": True,
                 "description": "Group members Count Metrics",
                 "name": ShortDevGroupPath,
@@ -49,13 +69,19 @@ objectDict = {
                 ],
                     "type": "Device Group Counts"
             }
-            if objectDict["name"] != "":
-                objectList.append(objectDict)
-        logger.info(f"ObjectList: {json.dumps(objectList, indent=4)}")
-        result = SevOne_appliance_obj.ingest_dev_obj_ind(automationDict["Name"],automationDict["IPToBeCreated"],objectList)
+        ]   
 
-```json
+```
+
+The below code should be called to ingest the data
+
+```sh
+    result = SevOne_appliance_obj.ingest_dev_obj_ind(automationDict["Name"],automationDict["IPToBeCreated"],objectList)
+```
+
+
 If you want to ingest data for multiple devices, use the below in your main function
+
 Create a DOI list as below
 eg
 ```json
@@ -157,6 +183,7 @@ dev_ob_ind_list = [
     ]
 ```
 Call the below function in your main function
+
 ```sh
 result = SevOne_appliance_obj.ingest_multi_dev_obj_ind(dev_ob_ind_list, max_threads=5):
 ```
