@@ -69,7 +69,7 @@ if __name__ == '__main__':
 
         #Create an objectList to be ingested
 
-        
+        timestamp = int(time.time())
         '''
         objectList = []
 
@@ -103,8 +103,105 @@ if __name__ == '__main__':
         logger.info(f"ObjectList: {json.dumps(objectList, indent=4)}")
         result = SevOne_appliance_obj.ingest_dev_obj_ind(automationDict["Name"],automationDict["IPToBeCreated"],objectList)'
         '''
-
-         
+        '''
+        dev_ob_ind_list = [
+        {
+            "automaticCreation": True,
+            "distributionOnAllPeers": True,
+            "name": "test1",
+            "ip": "100.1.1.1",
+            "objects":
+            [{
+                "automaticCreation": True,
+                "description": "Group members Count Metrics",
+                "name": "testObject1",
+                "pluginName": "DEFERRED",
+                "timestamps": [
+                    {
+                    "indicators": [
+                        {
+                        "format": "GAUGE",
+                        "name": "No of Stations",
+                        "units": "Number",
+                        "value": "1"
+                        }
+                    ],
+                    "timestamp": timestamp
+                    }
+                ],
+                    "type": "Device Group Counts"
+            },
+            {
+                "automaticCreation": True,
+                "description": "Group members Count Metrics",
+                "name": "testObject2",
+                "pluginName": "DEFERRED",
+                "timestamps": [
+                    {
+                    "indicators": [
+                        {
+                        "format": "GAUGE",
+                        "name": "No of Stations",
+                        "units": "Number",
+                        "value": "2"
+                        }
+                    ],
+                    "timestamp": timestamp
+                    }
+                ],
+                    "type": "Device Group Counts"
+            }]
+        },
+        {
+            "automaticCreation": True,
+            "distributionOnAllPeers": True,
+            "name": "test2",
+            "ip": "100.1.1.3",
+            "objects":
+            [{
+                "automaticCreation": True,
+                "description": "Group members Count Metrics",
+                "name": "testObject3",
+                "pluginName": "DEFERRED",
+                "timestamps": [
+                    {
+                    "indicators": [
+                        {
+                        "format": "GAUGE",
+                        "name": "No of Stations",
+                        "units": "Number",
+                        "value": "3"
+                        }
+                    ],
+                    "timestamp": timestamp
+                    }
+                ],
+                    "type": "Device Group Counts"
+            },
+            {
+                "automaticCreation": True,
+                "description": "Group members Count Metrics",
+                "name": "testObject4",
+                "pluginName": "DEFERRED",
+                "timestamps": [
+                    {
+                    "indicators": [
+                        {
+                        "format": "GAUGE",
+                        "name": "No of Stations",
+                        "units": "Number",
+                        "value": "5"
+                        }
+                    ],
+                    "timestamp": timestamp
+                    }
+                ],
+                    "type": "Device Group Counts"
+            }]
+        }
+        ]
+        SevOne_appliance_obj.ingest_multi_dev_obj_ind(dev_ob_ind_list)
+        '''
         # Exit with 0 for container to not restart    
         sys.exit(0)
 

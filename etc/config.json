@@ -4,7 +4,7 @@
             "IPAddress": "c29073v1.fyre.ibm.com",
             "UserName": "admin",
             "Password": {
-                "EncryptedPwd": "gAAAAABntXDxMG47FQrqItF89-kCLw39rNdADyFW6oJgUHq4WvgoOFajsK-G7ArvvzchZ3MHjvalOnoRhufpR-6zzXtrIa7X8Q=="
+                "EncryptedPwd": "gAAAAABoBzwKyprXS4pY9Tlp-fe-2mG00rrQlFNzoFyqoSYBQkDrfWyqnDiEiHN7QlZqeA5kz7l-F9EYbgyaZJaq0Cq3mygQYw=="
             },
             "sshUserName": "root",
             "sshPassword": {
@@ -16,5 +16,4 @@
     ],
     "LogLevel": "DEBUG",
     "MaxLogFileSize": "10485760"
-   
 }

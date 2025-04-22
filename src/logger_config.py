@@ -32,7 +32,7 @@ dPath = os.getcwd()
 
 # Create a file handler
 #logFilePath = "/app/log/ps-selfmon-last-polled.log"
-logFilePath = file_prefix + "log/el-wifi-automation.log"
+logFilePath = file_prefix + "log/sevone-data-ingestion.log"
 #file_handler = logging.FileHandler(logFilePath)
 size_handler = RotatingFileHandler(logFilePath, maxBytes=int(maxLogFileSize), backupCount=10)
 if 'DEBUG' in logLevel:
@@ -61,7 +61,10 @@ path.touch()
 os.chmod(logFilePath, 0o777)
 
 # Create a formatter with your desired log format
-formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+#formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+#formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - [Thread ID: %(thread)d] - %(message)s")
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - [%(threadName)s] - %(message)s")
+
 size_handler.setFormatter(formatter)
 
 # Add the file handler to the log
