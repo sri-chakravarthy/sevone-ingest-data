@@ -19,7 +19,7 @@
 %define fips %{getenv:RUN_ON_FIPS}
 
 Name:		%{rpmname}
-Version:	%{version}
+Version:	%{commit}
 %if 0%{release}
 Release:	%{release}%{?dist}
 %else
