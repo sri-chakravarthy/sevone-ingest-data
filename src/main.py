@@ -10,6 +10,8 @@ import sys
 from SevOneAppliance import *
 import threading
 from concurrent.futures import ThreadPoolExecutor
+import fcntl 
+import shutil
 
 def transform_device_data(input_data):
     #logger.info(f"Parsing and Ingesting: {input_data}")
@@ -60,10 +62,13 @@ def chunk_list(data_list, chunk_size):
     for i in range(0, len(data_list), chunk_size):
         yield data_list[i:i + chunk_size]
 
-def process_file(file_path,SevOne_appliance_obj):
+def process_file(file_path,archive_dir,SevOne_appliance_obj):
     try:
         with open(file_path, 'r') as f:
+            fcntl.flock(f, fcntl.LOCK_EX)
             json_data = json.load(f)
+            # Unlock the file
+            fcntl.flock(f, fcntl.LOCK_UN)
         #logger.debug(f"File: {file_path}, json data: {json_data}")
         transformed_data = transform_device_data(json_data)
         if len(json_data) == 1:
@@ -71,21 +76,24 @@ def process_file(file_path,SevOne_appliance_obj):
         elif len(json_data)>1 : 
             SevOne_appliance_obj.ingest_multi_dev_obj_ind(transformed_data)
 
-
         
+        # Move the file to archive directory
+        os.makedirs(archive_dir, exist_ok=True)
+        #archive_path = os.path.join(archive_dir, os.path.basename(file_path))
+        shutil.move(file_path, archive_dir)
         
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
 
 # Main function to scan the folder and process files with threads
-def process_folder_multithreaded( SevOne_appliance_obj,folder_path,batch_file_size=5, max_threads=4,):
+def process_folder_multithreaded( SevOne_appliance_obj,folder_path,archive_dir,batch_file_size=5, max_threads=4,):
     json_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.json')]
 
     for batch in chunk_list(json_files, batch_file_size):
         logger.info(f"\nProcessing batch of {len(batch)} files...")
         with ThreadPoolExecutor(max_workers=min(max_threads, len(batch))) as executor:
             for file_path in batch:
-                executor.submit(process_file, file_path,SevOne_appliance_obj)
+                executor.submit(process_file, file_path,archive_dir,SevOne_appliance_obj)
                 #process_file(file_path)
 
 if __name__ == '__main__':
@@ -147,7 +155,7 @@ if __name__ == '__main__':
         #Create an objectList to be ingested
 
         timestamp = int(time.time())
-        process_folder_multithreaded(SevOne_appliance_obj,config["FilePath"],config["BatchSize"])
+        process_folder_multithreaded(SevOne_appliance_obj,config["FilePath"],config["ArchivedDir"],config["BatchSize"])
         
         '''
         objectList = []

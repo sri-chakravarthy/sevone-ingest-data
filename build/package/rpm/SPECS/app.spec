@@ -49,7 +49,7 @@ mkdir -p %{buildroot}/var/custom/ps-addon/%{appname}/etc
 mkdir -p %{buildroot}/var/custom/ps-addon/%{appname}/log
 #mkdir -p %{buildroot}/var/custom/ps-addon/%{appname}/src
 mkdir -p %{buildroot}/var/custom/ps-addon/%{appname}/input
-#mkdir -p %{buildroot}/var/custom/ps-addon/%{appname}/archive
+mkdir -p %{buildroot}/var/custom/ps-addon/%{appname}/archive
 
 
 /bin/sed -i "s,APPNAMEREPLACE,%{appname},g" %{SOURCE0}/bin/run-sevone-ingest-data.sh
@@ -74,7 +74,8 @@ cp -r %{SOURCE0}/etc/* %{buildroot}/var/custom/ps-addon/%{appname}/etc/
 
 %files
 %dir /var/custom/ps-addon/%{appname}/
-/var/custom/ps-addon/%{appname}/input
+%dir /var/custom/ps-addon/%{appname}/input
+%dir /var/custom/ps-addon/%{appname}/archive
 #%dir /opt/SevOne/%{appname}/incoming
 #%dir /opt/SevOne/%{appname}/archive
 /var/custom/ps-addon/%{appname}/container/%{appname}-%{commit}.tar
