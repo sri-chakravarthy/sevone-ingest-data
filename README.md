@@ -185,5 +185,6 @@ dev_ob_ind_list = [
 Call the below function in your main function
 
 ```sh
+
 result = SevOne_appliance_obj.ingest_multi_dev_obj_ind(dev_ob_ind_list, max_threads=5):
 ```

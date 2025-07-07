@@ -131,19 +131,19 @@ class SevOneAppliance:
     def ingest_dev_obj_ind(self,deviceName,deviceIp_to_be_created,objectList):
         try:
             # Check if deviceName exists, if not create the deviceName.
-
-            deviceNamefromSevone, deviceId = self.get_device_details(deviceIp_to_be_created)
-            #Device already exists
-            if deviceNamefromSevone is not None: 
-                logger.info(f"Device with IP: {deviceIp_to_be_created} already exists on SevOne. Will update this device with polled metrics.")
-                deviceName = deviceNamefromSevone
-            if deviceId is None:
-                logger.debug(f"No device configured for IP: {deviceIp_to_be_created} ")
-                #logger.debug(f"Creating new device: {deviceName}, DeviceIP: {deviceIp_to_be_created}")
-                #deviceId,deviceName = self.create_device(deviceName,deviceIp_to_be_created)
-                #if deviceId is None:
-                #        logger.error(f"Failed to create a device with DeviceName: {deviceName}")
-                #        return 1
+            if deviceIp_to_be_created != "":
+                deviceNamefromSevone, deviceId = self.get_device_details(deviceIp_to_be_created)
+                #Device already exists
+                if deviceNamefromSevone is not None: 
+                    logger.info(f"Device with IP: {deviceIp_to_be_created} already exists on SevOne. Will update this device with polled metrics.")
+                    deviceName = deviceNamefromSevone
+                if deviceId is None:
+                    logger.debug(f"No device configured for IP: {deviceIp_to_be_created} ")
+                    #logger.debug(f"Creating new device: {deviceName}, DeviceIP: {deviceIp_to_be_created}")
+                    #deviceId,deviceName = self.create_device(deviceName,deviceIp_to_be_created)
+                    #if deviceId is None:
+                    #        logger.error(f"Failed to create a device with DeviceName: {deviceName}")
+                    #        return 1
 
             objtype_ind_dict_polled = {}
             polled_obj_ind_dict = {}
@@ -271,107 +271,7 @@ class SevOneAppliance:
     
 
     def ingest_multi_dev_obj_ind(self,dev_ob_ind_list, max_threads=5):
-        
-        
-        '''
-        dev_ob_ind_list = [
-        {
-            "automaticCreation": True,
-            "distributionOnAllPeers": True,
-            "name": deviceName,
-            "ip": deviceIp_to_be_created,
-            "objects":
-            [{
-                "automaticCreation": True,
-                "description": "Group members Count Metrics",
-                "name": ShortDevGroupPath,
-                "pluginName": "DEFERRED",
-                "timestamps": [
-                    {
-                    "indicators": [
-                        {
-                        "format": "GAUGE",
-                        "name": "No of Stations",
-                        "units": "Number",
-                        "value": deviceGroupDict[group_id]["NoOfStations"]
-                        }
-                    ],
-                    "timestamp": timestamp
-                    }
-                ],
-                    "type": "Device Group Counts"
-            },
-            {
-                "automaticCreation": True,
-                "description": "Group members Count Metrics",
-                "name": ShortDevGroupPath,
-                "pluginName": "DEFERRED",
-                "timestamps": [
-                    {
-                    "indicators": [
-                        {
-                        "format": "GAUGE",
-                        "name": "No of Stations",
-                        "units": "Number",
-                        "value": deviceGroupDict[group_id]["NoOfStations"]
-                        }
-                    ],
-                    "timestamp": timestamp
-                    }
-                ],
-                    "type": "Device Group Counts"
-            }]
-        },
-        {
-            "automaticCreation": True,
-            "distributionOnAllPeers": True,
-            "name": deviceName,
-            "ip": deviceIp_to_be_created,
-            "objects":
-            [{
-                "automaticCreation": True,
-                "description": "Group members Count Metrics",
-                "name": ShortDevGroupPath,
-                "pluginName": "DEFERRED",
-                "timestamps": [
-                    {
-                    "indicators": [
-                        {
-                        "format": "GAUGE",
-                        "name": "No of Stations",
-                        "units": "Number",
-                        "value": deviceGroupDict[group_id]["NoOfStations"]
-                        }
-                    ],
-                    "timestamp": timestamp
-                    }
-                ],
-                    "type": "Device Group Counts"
-            },
-            {
-                "automaticCreation": True,
-                "description": "Group members Count Metrics",
-                "name": ShortDevGroupPath,
-                "pluginName": "DEFERRED",
-                "timestamps": [
-                    {
-                    "indicators": [
-                        {
-                        "format": "GAUGE",
-                        "name": "No of Stations",
-                        "units": "Number",
-                        "value": deviceGroupDict[group_id]["NoOfStations"]
-                        }
-                    ],
-                    "timestamp": timestamp
-                    }
-                ],
-                    "type": "Device Group Counts"
-            }]
-        }
-    ]
-
-    '''
+       
         with ThreadPoolExecutor(max_workers=max_threads) as executor:
             futures = []
             for dev_obj_ind in dev_ob_ind_list:

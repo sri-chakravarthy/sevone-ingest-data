@@ -8,85 +8,8 @@ import base64
 import time
 import sys
 from SevOneAppliance import *
-import threading
-from concurrent.futures import ThreadPoolExecutor
-
-def transform_device_data(input_data):
-    #logger.info(f"Parsing and Ingesting: {input_data}")
-    dev_ob_ind_list = []
-    deviceObjectDict = {}
-    objectList = []
-    for objectDetails in input_data:
-        logger.debug(f'Checking device : {objectDetails["deviceName"]}, Object: {objectDetails["objectName"]}')
-        if objectDetails["deviceName"] not in deviceObjectDict:
-            deviceObjectDict[objectDetails["deviceName"]] = []
-        indicatorList = []
-        #logger.debug(f'Indicators to be process : {objectDetails["measResults"]}')
-        for indicatorDetails in objectDetails["measResults"]:
-            #logger.debug(f'Checking Indicator : {indicatorDetails}')
-            indicatorDict = {
-                "format": indicatorDetails["indicatorFormat"].split('.')[-1],
-                "name": indicatorDetails["indicatorName"],
-                "units": indicatorDetails["indicatorUnit"],
-                "value": indicatorDetails["indicatorValue"],
-            }
-            indicatorList.append(indicatorDict)
-        #logger.debug(f'Checking IndicatorLost : {indicatorList}')
-        objectDict = {
-            "automaticCreation": True,
-            "description": objectDetails["objectName"],
-            "name": objectDetails["objectName"],
-            "pluginName": "DEFERRED",
-            "timestamps": [
-                {
-                "indicators": indicatorList,
-                "timestamp": objectDetails["granPeriodEndTime"]
-                }
-            ],
-            "type": objectDetails["objectType"]
-        }
-        deviceObjectDict[objectDetails["deviceName"]].append(objectDict)
-    for device, objDetails in deviceObjectDict.items():
-        dev_ob_ind_list.append({"automaticCreation": True,
-            "distributionOnAllPeers": True,
-            "name": device,
-            "ip" : "",
-            "objects":objDetails })
-    logger.debug(f"DeviceObjectDict To ingest: {dev_ob_ind_list}")
-    return dev_ob_ind_list
-    
-
-def chunk_list(data_list, chunk_size):
-    for i in range(0, len(data_list), chunk_size):
-        yield data_list[i:i + chunk_size]
-
-def process_file(file_path,SevOne_appliance_obj):
-    try:
-        with open(file_path, 'r') as f:
-            json_data = json.load(f)
-        #logger.debug(f"File: {file_path}, json data: {json_data}")
-        transformed_data = transform_device_data(json_data)
-        if len(json_data) == 1:
-            SevOne_appliance_obj.ingest_dev_obj_ind(transformed_data)
-        elif len(json_data)>1 : 
-            SevOne_appliance_obj.ingest_multi_dev_obj_ind(transformed_data)
 
 
-        
-        
-    except Exception as e:
-        print(f"Error processing {file_path}: {e}")
-
-# Main function to scan the folder and process files with threads
-def process_folder_multithreaded( SevOne_appliance_obj,folder_path,batch_file_size=5, max_threads=4,):
-    json_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.json')]
-
-    for batch in chunk_list(json_files, batch_file_size):
-        logger.info(f"\nProcessing batch of {len(batch)} files...")
-        with ThreadPoolExecutor(max_workers=min(max_threads, len(batch))) as executor:
-            for file_path in batch:
-                executor.submit(process_file, file_path,SevOne_appliance_obj)
-                #process_file(file_path)
 
 if __name__ == '__main__':
     try:
@@ -122,8 +45,8 @@ if __name__ == '__main__':
         
         logger.info(f"Checking if host is PAS/HSA")
         
-        
         '''
+        
         with open(f'{file_prefix}SevOne.masterslave.master') as f:
             if f.read().rstrip() == '0':
             
@@ -147,8 +70,6 @@ if __name__ == '__main__':
         #Create an objectList to be ingested
 
         timestamp = int(time.time())
-        process_folder_multithreaded(SevOne_appliance_obj,config["FilePath"],config["BatchSize"])
-        
         '''
         objectList = []
 
@@ -281,7 +202,6 @@ if __name__ == '__main__':
         ]
         SevOne_appliance_obj.ingest_multi_dev_obj_ind(dev_ob_ind_list)
         '''
-
         # Exit with 0 for container to not restart    
         sys.exit(0)
 
