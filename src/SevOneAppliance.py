@@ -270,21 +270,33 @@ class SevOneAppliance:
             return 1
     
 
-    def ingest_multi_dev_obj_ind(self,dev_ob_ind_list, max_threads=5):
+    def ingest_multi_dev_obj_ind_thread(self,dev_ob_ind_list, max_threads=5):
        
-        with ThreadPoolExecutor(max_workers=max_threads) as executor:
-            futures = []
-            for dev_obj_ind in dev_ob_ind_list:
-                futures.append(
-                    executor.submit(
-                        self.ingest_dev_obj_ind,
-                        dev_obj_ind["name"],
-                        dev_obj_ind["ip"],
-                        dev_obj_ind["objects"]
-                    )
-                )
-            results = [f.result() for f in futures]
-            return results
+        if not dev_ob_ind_list:
+            return []
+
+        # If there's only one item or fewer than max_threads, no need to spin up unnecessary threads
+        effective_threads = min(max_threads, len(dev_ob_ind_list))
+
+        with ThreadPoolExecutor(max_workers=effective_threads) as executor:
+            results = list(executor.map(
+                lambda dev_obj: self.ingest_dev_obj_ind(
+                    dev_obj["name"],
+                    dev_obj["ip"],
+                    dev_obj["objects"]
+                ),
+                dev_ob_ind_list
+            ))
+
+        return results
+    
+    def ingest_multi_dev_obj_ind(self,dev_ob_ind_list):       
+        if not dev_ob_ind_list:
+            return []
+        return [
+            self.ingest_dev_obj_ind(d["name"], d["ip"], d["objects"])
+            for d in dev_ob_ind_list
+        ]
 
 
 
