@@ -2,7 +2,7 @@
 %global debug_package %{nil}
 
 %define commit %{getenv:GITHUB_REF_NAME}
-%define version %{getenv:VERSION}
+%define version %{getenv:GITHUB_REF_NAME}
 %define release %{getenv:RELEASE}
 %define appname %{getenv:APP_NAME}
 %define giturl %{getenv:GITHUB_SERVER_URL}/%{getenv:GITHUB_REPOSITORY}
@@ -19,7 +19,7 @@
 %define fips %{getenv:RUN_ON_FIPS}
 
 Name:		%{rpmname}
-Version:	%{commit}
+Version:	%{version}
 %if 0%{release}
 Release:	%{release}%{?dist}
 %else
@@ -76,6 +76,7 @@ cp -r %{SOURCE0}/etc/* %{buildroot}/var/custom/ps-addon/%{appname}/etc/
 %dir /var/custom/ps-addon/%{appname}/
 %dir /var/custom/ps-addon/%{appname}/input
 %dir /var/custom/ps-addon/%{appname}/archive
+%dir /var/custom/ps-addon/%{appname}/log
 #%dir /opt/SevOne/%{appname}/incoming
 #%dir /opt/SevOne/%{appname}/archive
 /var/custom/ps-addon/%{appname}/container/%{appname}-%{commit}.tar
@@ -83,7 +84,7 @@ cp -r %{SOURCE0}/etc/* %{buildroot}/var/custom/ps-addon/%{appname}/etc/
 #/opt/SevOne/%{appname}/env/key.txt
 #/opt/SevOne/%{appname}/etc/*.json
 #/opt/SevOne/%{appname}/etc/*.csv
-/var/custom/ps-addon/%{appname}/bin/*.sh
+/var/custom/ps-addon/%{appname}/bin/*
 #/opt/SevOne/%{appname}/src/*.py
 #/opt/SevOne/%{appname}/cronjob.yml
 /var/custom/ps-addon/%{appname}/etc/*
@@ -119,7 +120,7 @@ else
 fi
 
 #chown -R %{appusername}:%{appusername} /var/custom/ps-addon/%{appname}
-#chmod +x /var/custom/ps-addon/%{appname}/*.py
+chmod +x /var/custom/ps-addon/%{appname}/bin/*.sh
 
 #if /usr/local/bin/kubectl get cronjob %{appname}  > /dev/null 2>&1; then
 #    echo "---   Deleting kubernetes cronjob %{appname}"
