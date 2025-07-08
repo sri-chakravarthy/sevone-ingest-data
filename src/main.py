@@ -83,7 +83,7 @@ def process_file(file_path,archive_dir,SevOne_appliance_obj,executor):
         shutil.move(file_path, archive_dir)
         
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        logger.error(f"Error processing {file_path}: {e}")
 
 # Main function to scan the folder and process files with threads
 def process_folder_multithreaded(SevOne_appliance_obj, folder_path, archive_dir, max_threads=16):
@@ -91,6 +91,7 @@ def process_folder_multithreaded(SevOne_appliance_obj, folder_path, archive_dir,
 
     logger.info(f"Found {len(json_files)} files")
     with ThreadPoolExecutor(max_workers=max_threads) as executor:
+        logger.info(f"Starting threads......")
         for file_path in json_files:
             executor.submit(process_file, file_path, archive_dir, SevOne_appliance_obj,executor)
 
