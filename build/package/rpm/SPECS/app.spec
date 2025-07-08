@@ -53,8 +53,9 @@ mkdir -p %{buildroot}/var/custom/ps-addon/%{appname}/archive
 
 
 /bin/sed -i "s,APPNAMEREPLACE,%{appname},g" %{SOURCE0}/bin/run-sevone-ingest-data.sh
-#/bin/sed -i "s,CONTAINERIMAGEREPLACE,%{containerimage},g" %{SOURCE0}/etc/cronjob.yml
-#/bin/sed -i "s,CONTAINERIMAGEVERSIONREPLACE,%{commit},g" %{SOURCE0}/etc/cronjob.yml
+/bin/sed -i "s,CONTAINERIMAGEREPLACE,%{containerimage},g" %{SOURCE0}/bin/run-sevone-ingest-data.sh
+/bin/sed -i "s,CONTAINERIMAGEVERSIONREPLACE,%{commit},g" %{SOURCE0}/bin/run-sevone-ingest-data.sh
+
 
 
 
