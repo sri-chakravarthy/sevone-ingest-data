@@ -35,7 +35,7 @@ class SevOneAppliance:
         else:
             self.sshKeyPath = None
         self.bearer_token = self.get_and_extract_auth_bearer_token()
-        self.ssh_client = self.get_ssh_client()
+        #self.ssh_client = self.get_ssh_client()
 
     def get_host_details(self):
         host_ip = os.getenv('HOST_IP', '127.0.0.1')

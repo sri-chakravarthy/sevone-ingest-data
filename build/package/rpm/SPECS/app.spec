@@ -1,6 +1,7 @@
 %define date %(date +"%Y%m%d")
 %global debug_package %{nil}
 
+
 %define commit %{getenv:GITHUB_REF_NAME}
 %define version %{getenv:GITHUB_REF_NAME}
 %define release %{getenv:RELEASE}
