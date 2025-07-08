@@ -16,7 +16,7 @@ HOST_IP=${HOST_IP}
   -v /var/custom/ps-addon/$APP_NAME/env:/app/env \
   -v /var/custom/ps-addon/$APP_NAME/bin:/app/bin \
   -v /var/custom/ps-addon/$APP_NAME/log:/app/log \
-  -v /var/custom/ps-addon/$APP_NAME/input:/app/input:ro \
+  -v /var/custom/ps-addon/$APP_NAME/input:/app/input:rw \
   -v /var/custom/ps-addon/$APP_NAME/archive:/app/archive:rw \
   -e HOST_IP="$HOST_IP" \
   "$IMAGE_NAME"

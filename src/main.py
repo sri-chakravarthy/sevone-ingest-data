@@ -62,7 +62,7 @@ def chunk_list(data_list, chunk_size):
     for i in range(0, len(data_list), chunk_size):
         yield data_list[i:i + chunk_size]
 
-def process_file(file_path,archive_dir,SevOne_appliance_obj):
+def process_file(file_path,archive_dir,SevOne_appliance_obj,executor):
     try:
         with open(file_path, 'r') as f:
             fcntl.flock(f, fcntl.LOCK_EX)
@@ -74,7 +74,7 @@ def process_file(file_path,archive_dir,SevOne_appliance_obj):
         if len(json_data) == 1:
             SevOne_appliance_obj.ingest_dev_obj_ind(transformed_data)
         elif len(json_data)>1 : 
-            SevOne_appliance_obj.ingest_multi_dev_obj_ind_thread(transformed_data)
+            SevOne_appliance_obj.ingest_multi_dev_obj_ind_thread(transformed_data,executor=executor)
 
         
         # Move the file to archive directory
@@ -92,7 +92,7 @@ def process_folder_multithreaded(SevOne_appliance_obj, folder_path, archive_dir,
     logger.info(f"Found {len(json_files)} files")
     with ThreadPoolExecutor(max_workers=max_threads) as executor:
         for file_path in json_files:
-            executor.submit(process_file, file_path, archive_dir, SevOne_appliance_obj)
+            executor.submit(process_file, file_path, archive_dir, SevOne_appliance_obj,executor)
 
                 #process_file(file_path)
 
