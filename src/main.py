@@ -74,7 +74,7 @@ def process_file(file_path,archive_dir,SevOne_appliance_obj):
         if len(json_data) == 1:
             SevOne_appliance_obj.ingest_dev_obj_ind(transformed_data)
         elif len(json_data)>1 : 
-            SevOne_appliance_obj.ingest_multi_dev_obj_ind(transformed_data)
+            SevOne_appliance_obj.ingest_multi_dev_obj_ind_thread(transformed_data)
 
         
         # Move the file to archive directory
@@ -86,14 +86,14 @@ def process_file(file_path,archive_dir,SevOne_appliance_obj):
         print(f"Error processing {file_path}: {e}")
 
 # Main function to scan the folder and process files with threads
-def process_folder_multithreaded( SevOne_appliance_obj,folder_path,archive_dir,batch_file_size=5, max_threads=4,):
+def process_folder_multithreaded(SevOne_appliance_obj, folder_path, archive_dir, max_threads=16):
     json_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.json')]
 
-    for batch in chunk_list(json_files, batch_file_size):
-        logger.info(f"\nProcessing batch of {len(batch)} files...")
-        with ThreadPoolExecutor(max_workers=min(max_threads, len(batch))) as executor:
-            for file_path in batch:
-                executor.submit(process_file, file_path,archive_dir,SevOne_appliance_obj)
+    logger.info(f"Found {len(json_files)} files")
+    with ThreadPoolExecutor(max_workers=max_threads) as executor:
+        for file_path in json_files:
+            executor.submit(process_file, file_path, archive_dir, SevOne_appliance_obj)
+
                 #process_file(file_path)
 
 if __name__ == '__main__':

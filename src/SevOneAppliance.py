@@ -270,7 +270,7 @@ class SevOneAppliance:
             return 1
     
 
-    def ingest_multi_dev_obj_ind_thread(self,dev_ob_ind_list, max_threads=5):
+    def ingest_multi_dev_obj_ind_thread(self,dev_ob_ind_list, max_threads=8):
        
         if not dev_ob_ind_list:
             return []
