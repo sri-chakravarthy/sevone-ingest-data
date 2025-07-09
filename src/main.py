@@ -66,9 +66,9 @@ def chunk_list(data_list, chunk_size):
 def process_file(file_path,archive_dir,SevOne_appliance_obj):
     try:
         with open(file_path, 'r') as f:
-            fcntl.flock(f, fcntl.LOCK_EX)
+            #fcntl.flock(f, fcntl.LOCK_EX)
             json_data = json.load(f)
-            fcntl.flock(f, fcntl.LOCK_UN)
+            #fcntl.flock(f, fcntl.LOCK_UN)
 
         transformed_data = transform_device_data(json_data)
 
@@ -100,7 +100,7 @@ def process_folder_multithreaded(SevOne_appliance_obj, folder_path, archive_dir,
     logger.info(f"Found {len(json_files)} files")
 
     file_batches = list(chunk_list(json_files, batch_size))
-
+    futures = []
     with ThreadPoolExecutor(max_workers=max_threads) as executor:
         '''
         for file_path in json_files:
@@ -109,7 +109,15 @@ def process_folder_multithreaded(SevOne_appliance_obj, folder_path, archive_dir,
             executor.submit(process_file, file_path, archive_dir, SevOne_appliance_obj)
         '''
         for batch in file_batches:
-            executor.submit(process_file_batch, batch, archive_dir, SevOne_appliance_obj)
+            future = executor.submit(process_file_batch, batch, archive_dir, SevOne_appliance_obj)
+            futures.append(future)
+
+        # Wait for all batches to finish
+        for future in as_completed(futures):
+            try:
+                future.result()  # This raises any exceptions if occurred
+            except Exception as e:
+                logger.error(f"Batch failed with error: {e}")
 
 if __name__ == '__main__':
     try:
