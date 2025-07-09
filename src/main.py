@@ -63,8 +63,7 @@ def chunk_list(data_list, chunk_size):
     for i in range(0, len(data_list), chunk_size):
         yield data_list[i:i + chunk_size]
 
-def process_file(file_path,archive_dir,SevOne_appliance_obj,executor):
-    futures = []
+def process_file(file_path,archive_dir,SevOne_appliance_obj):
     try:
         with open(file_path, 'r') as f:
             fcntl.flock(f, fcntl.LOCK_EX)
@@ -73,28 +72,21 @@ def process_file(file_path,archive_dir,SevOne_appliance_obj,executor):
 
         transformed_data = transform_device_data(json_data)
 
-        if len(json_data) == 1:
-            futures.append(
-                executor.submit(
-                    SevOne_appliance_obj.ingest_dev_obj_ind,
-                    transformed_data[0]["name"],
-                    transformed_data[0]["ip"],
-                    transformed_data[0]["objects"]
+        if isinstance(transformed_data, list):
+            for d in transformed_data:
+                SevOne_appliance_obj.ingest_dev_obj_ind(
+                    d.get("name", ""),
+                    d.get("ip", ""),
+                    d.get("objects", [])
                 )
-            )
-        elif len(json_data) > 1:
-            futures.extend(
-                SevOne_appliance_obj.ingest_multi_dev_obj_ind_thread(
-                    transformed_data, executor=executor
-                )
-            )
+        else:
+            logger.error(f"Unexpected transformed data: {transformed_data}")
 
         os.makedirs(archive_dir, exist_ok=True)
-        shutil.move(file_path, archive_dir)
+        shutil.move(file_path, os.path.join(archive_dir, os.path.basename(file_path)))
 
     except Exception as e:
         logger.error(f"Error processing {file_path}: {e}")
-    return futures
 
 # Main function to scan the folder and process files with threads
 def process_folder_multithreaded(SevOne_appliance_obj, folder_path, archive_dir, max_threads=16):
@@ -107,23 +99,8 @@ def process_folder_multithreaded(SevOne_appliance_obj, folder_path, archive_dir,
     with ThreadPoolExecutor(max_workers=max_threads) as executor:
         for file_path in json_files:
             # Submit process_file, which itself submits more tasks
-            future = executor.submit(process_file, file_path, archive_dir, SevOne_appliance_obj, executor)
-            top_level_futures.append(future)
-
-        for f in as_completed(top_level_futures):
-            try:
-                result = f.result()  # Should return a list of futures
-                if result:
-                    nested_futures.extend(result)
-            except Exception as e:
-                logger.error(f"Error in file processing: {e}")
-
-        # Wait for all nested REST API ingestion tasks
-        for nf in as_completed(nested_futures):
-            try:
-                nf.result()
-            except Exception as e:
-                logger.error(f"Error in ingestion task: {e}")
+            logger.info(f"Processing file: {file_path}")
+            executor.submit(process_file, file_path, archive_dir, SevOne_appliance_obj)
 
 if __name__ == '__main__':
     try:
