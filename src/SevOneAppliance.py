@@ -18,7 +18,7 @@ import traceback
 from concurrent.futures import ThreadPoolExecutor
 
 class SevOneAppliance:
-    def __init__(self,ipAddress,username,password,ssh_username=None,ssh_password=None,use_ssh_keys=0):
+    def __init__(self,ipAddress,username,password,ssh_username=None,ssh_password=None,use_ssh_keys=0, secure=False):
         self.IPAddress = ipAddress
         self.UserName = username
         self.Password = password
@@ -35,6 +35,13 @@ class SevOneAppliance:
         else:
             self.sshKeyPath = None
         self.bearer_token = self.get_and_extract_auth_bearer_token()
+        self.session = requests.Session()
+        self.session.headers.update({
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Authorization": f"Bearer {self.bearer_token}"
+        })
+        self.session.verify = not secure  # handles SSL verification
         #self.ssh_client = self.get_ssh_client()
 
     def get_host_details(self):
@@ -615,20 +622,20 @@ class SevOneAppliance:
             # Make the API call with the headers and SSL certificate verification option
             if method == "GET":
                 url = url + "?page=0&size=10000"
-                response = requests.get(url, headers=headers, verify=verify)
+                response = self.session.get(url, headers=headers, verify=verify)
                 response_data = response.json()
             elif method == "POST" :
                 if input_data == "":
-                    response = requests.post(url, headers=headers, verify=verify)
+                    response = self.session.post(url, headers=headers, verify=verify)
                     response_data = response.json()
                 else:
-                    response = requests.post(url, headers=headers, verify=verify,data=input_data)
+                    response = self.session.post(url, headers=headers, verify=verify,data=input_data)
                     response_data = response.json()
             elif method=="PATCH" :
                 if input_data == "":
-                    response = requests.patch(url, headers=headers, verify=verify)
+                    response = self.session.patch(url, headers=headers, verify=verify)
                 else:
-                    response = requests.patch(url, headers=headers, verify=verify,data=input_data)
+                    response = self.session.patch(url, headers=headers, verify=verify,data=input_data)
             else:
                 logger.error("Unknown http request method passed")
             # Check if the request was successful (status code 200)

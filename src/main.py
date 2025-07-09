@@ -88,19 +88,28 @@ def process_file(file_path,archive_dir,SevOne_appliance_obj):
     except Exception as e:
         logger.error(f"Error processing {file_path}: {e}")
 
+def process_file_batch(file_batch, archive_dir, SevOne_appliance_obj):
+    """Process a list of files (a batch) sequentially in a thread"""
+    for file_path in file_batch:
+        logger.info(f"[Thread] Processing file: {file_path}")
+        process_file(file_path, archive_dir, SevOne_appliance_obj)
+
 # Main function to scan the folder and process files with threads
-def process_folder_multithreaded(SevOne_appliance_obj, folder_path, archive_dir, max_threads=16):
+def process_folder_multithreaded(SevOne_appliance_obj, folder_path, archive_dir, batch_size=100, max_threads=16):
     json_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.json')]
     logger.info(f"Found {len(json_files)} files")
 
-    top_level_futures = []
-    nested_futures = []
+    file_batches = list(chunk_list(json_files, batch_size))
 
     with ThreadPoolExecutor(max_workers=max_threads) as executor:
+        '''
         for file_path in json_files:
             # Submit process_file, which itself submits more tasks
             logger.info(f"Processing file: {file_path}")
             executor.submit(process_file, file_path, archive_dir, SevOne_appliance_obj)
+        '''
+        for batch in file_batches:
+            executor.submit(process_file_batch, batch, archive_dir, SevOne_appliance_obj)
 
 if __name__ == '__main__':
     try:
@@ -161,7 +170,7 @@ if __name__ == '__main__':
         #Create an objectList to be ingested
 
         timestamp = int(time.time())
-        process_folder_multithreaded(SevOne_appliance_obj,config["FilePath"],config["ArchivedDir"],config["BatchSize"])
+        process_folder_multithreaded(SevOne_appliance_obj,config["FilePath"],config["ArchivedDir"],config["BatchSize"],config["MaxThreads"])
         
         '''
         objectList = []
