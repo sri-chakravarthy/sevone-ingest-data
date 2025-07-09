@@ -77,9 +77,9 @@ def process_file(file_path,archive_dir,SevOne_appliance_obj,executor):
             futures.append(
                 executor.submit(
                     SevOne_appliance_obj.ingest_dev_obj_ind,
-                    transformed_data["name"],
-                    transformed_data["ip"],
-                    transformed_data["objects"]
+                    transformed_data[0]["name"],
+                    transformed_data[0]["ip"],
+                    transformed_data[0]["objects"]
                 )
             )
         elif len(json_data) > 1:
