@@ -270,23 +270,19 @@ class SevOneAppliance:
             return 1
     
 
-    def ingest_multi_dev_obj_ind_thread(self,dev_ob_ind_list,executor=None, max_threads=8):
-       
+    def ingest_multi_dev_obj_ind_thread(self, dev_ob_ind_list, executor=None, max_threads=8):
         if not dev_ob_ind_list:
             return []
-        
+
         if executor:
-            # Reuse the passed executor
-            futures = [
+            return [
                 executor.submit(self.ingest_dev_obj_ind, d["name"], d["ip"], d["objects"])
                 for d in dev_ob_ind_list
             ]
-            return [f.result() for f in futures]
         else:
-            # Only create if not passed in (for backward compatibility)
-            with ThreadPoolExecutor(max_workers=min(max_threads, len(dev_ob_ind_list))) as executor:
+            with ThreadPoolExecutor(max_workers=min(max_threads, len(dev_ob_ind_list))) as temp_executor:
                 futures = [
-                    executor.submit(self.ingest_dev_obj_ind, d["name"], d["ip"], d["objects"])
+                    temp_executor.submit(self.ingest_dev_obj_ind, d["name"], d["ip"], d["objects"])
                     for d in dev_ob_ind_list
                 ]
                 return [f.result() for f in futures]

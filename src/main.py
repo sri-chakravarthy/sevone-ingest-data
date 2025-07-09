@@ -12,6 +12,7 @@ import threading
 from concurrent.futures import ThreadPoolExecutor
 import fcntl 
 import shutil
+from concurrent.futures import as_completed
 
 def transform_device_data(input_data):
     #logger.info(f"Parsing and Ingesting: {input_data}")
@@ -63,39 +64,66 @@ def chunk_list(data_list, chunk_size):
         yield data_list[i:i + chunk_size]
 
 def process_file(file_path,archive_dir,SevOne_appliance_obj,executor):
+    futures = []
     try:
         with open(file_path, 'r') as f:
             fcntl.flock(f, fcntl.LOCK_EX)
             json_data = json.load(f)
-            # Unlock the file
             fcntl.flock(f, fcntl.LOCK_UN)
-        #logger.debug(f"File: {file_path}, json data: {json_data}")
-        transformed_data = transform_device_data(json_data)
-        if len(json_data) == 1:
-            SevOne_appliance_obj.ingest_dev_obj_ind(transformed_data)
-        elif len(json_data)>1 : 
-            SevOne_appliance_obj.ingest_multi_dev_obj_ind_thread(transformed_data,executor=executor)
 
-        
-        # Move the file to archive directory
+        transformed_data = transform_device_data(json_data)
+
+        if len(json_data) == 1:
+            futures.append(
+                executor.submit(
+                    SevOne_appliance_obj.ingest_dev_obj_ind,
+                    transformed_data["name"],
+                    transformed_data["ip"],
+                    transformed_data["objects"]
+                )
+            )
+        elif len(json_data) > 1:
+            futures.extend(
+                SevOne_appliance_obj.ingest_multi_dev_obj_ind_thread(
+                    transformed_data, executor=executor
+                )
+            )
+
         os.makedirs(archive_dir, exist_ok=True)
-        #archive_path = os.path.join(archive_dir, os.path.basename(file_path))
         shutil.move(file_path, archive_dir)
-        
+
     except Exception as e:
         logger.error(f"Error processing {file_path}: {e}")
+    return futures
 
 # Main function to scan the folder and process files with threads
 def process_folder_multithreaded(SevOne_appliance_obj, folder_path, archive_dir, max_threads=16):
     json_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.json')]
-
     logger.info(f"Found {len(json_files)} files")
-    with ThreadPoolExecutor(max_workers=max_threads) as executor:
-        logger.info(f"Starting threads......")
-        for file_path in json_files:
-            executor.submit(process_file, file_path, archive_dir, SevOne_appliance_obj,executor)
 
-                #process_file(file_path)
+    top_level_futures = []
+    nested_futures = []
+
+    with ThreadPoolExecutor(max_workers=max_threads) as executor:
+        for file_path in json_files:
+            # Submit process_file, which itself submits more tasks
+            future = executor.submit(process_file, file_path, archive_dir, SevOne_appliance_obj, executor)
+            top_level_futures.append(future)
+
+        for f in as_completed(top_level_futures):
+            try:
+                result = f.result()  # Should return a list of futures
+                if result:
+                    nested_futures.extend(result)
+            except Exception as e:
+                logger.error(f"Error in file processing: {e}")
+
+        # Wait for all nested REST API ingestion tasks
+        for nf in as_completed(nested_futures):
+            try:
+                nf.result()
+            except Exception as e:
+                logger.error(f"Error in ingestion task: {e}")
 
 if __name__ == '__main__':
     try:
@@ -105,7 +133,7 @@ if __name__ == '__main__':
         loop_start = int(time.time())
 
         
-        file_prefix = "/app/"
+        file_prefix = ""
         #configurationFile = "/opt/IBM/expert-labs/el-proj-templates/etc/config.json"
         #keyFile = "/opt/IBM/expert-labs/el-proj-templates/env/key.txt"
         configurationFile = file_prefix + "etc/config.json"
