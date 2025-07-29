@@ -1,0 +1,1678 @@
+[
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_X2_gNB_per_LNCEL",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-1,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_X2_gNB_per_LNCEL",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8080C5",
+                "indicatorValue": "376913359",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8080C11",
+                "indicatorValue": "11245934",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_X2_gNB_per_LNCEL",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-2,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_X2_gNB_per_LNCEL",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8080C5",
+                "indicatorValue": "123620087",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8080C11",
+                "indicatorValue": "636684",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_X2_gNB_per_LNCEL",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-1,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_X2_gNB_per_LNCEL",
+        "granPeriodEndTime": 1749734100,
+        "measResults": [
+            {
+                "indicatorName": "M8080C5",
+                "indicatorValue": "254190133",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8080C11",
+                "indicatorValue": "2971516",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_X2_gNB_per_LNCEL",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-2,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_X2_gNB_per_LNCEL",
+        "granPeriodEndTime": 1749734100,
+        "measResults": [
+            {
+                "indicatorName": "M8080C5",
+                "indicatorValue": "202741619",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8080C11",
+                "indicatorValue": "6368907",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_X2_gNB_per_LNCEL",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-1,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_X2_gNB_per_LNCEL",
+        "granPeriodEndTime": 1749735000,
+        "measResults": [
+            {
+                "indicatorName": "M8080C5",
+                "indicatorValue": "296517139",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8080C11",
+                "indicatorValue": "1463496",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_X2_gNB_per_LNCEL",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-2,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_X2_gNB_per_LNCEL",
+        "granPeriodEndTime": 1749735000,
+        "measResults": [
+            {
+                "indicatorName": "M8080C5",
+                "indicatorValue": "158254840",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8080C11",
+                "indicatorValue": "1401136",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_X2_gNB_per_LNCEL",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-1,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_X2_gNB_per_LNCEL",
+        "granPeriodEndTime": 1749735900,
+        "measResults": [
+            {
+                "indicatorName": "M8080C5",
+                "indicatorValue": "201757492",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8080C11",
+                "indicatorValue": "2872037",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_X2_gNB_per_LNCEL",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-2,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_X2_gNB_per_LNCEL",
+        "granPeriodEndTime": 1749735900,
+        "measResults": [
+            {
+                "indicatorName": "M8080C5",
+                "indicatorValue": "132943350",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8080C11",
+                "indicatorValue": "12869807",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_Cell_Load",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-1,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_Cell_Load",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8001C8",
+                "indicatorValue": "3464",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8001C6",
+                "indicatorValue": "1792",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8001C7",
+                "indicatorValue": "32",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8001C286",
+                "indicatorValue": "1675",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8001C519",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8001C520",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8001C521",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8001C522",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_EPS_Bearer",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-1,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_EPS_Bearer",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8006C0",
+                "indicatorValue": "3281",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C1",
+                "indicatorValue": "3281",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C6",
+                "indicatorValue": "11",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C7",
+                "indicatorValue": "8",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C8",
+                "indicatorValue": "33",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C9",
+                "indicatorValue": "2",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C89",
+                "indicatorValue": "4",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C98",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C107",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C116",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C188",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C197",
+                "indicatorValue": "3",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C206",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C215",
+                "indicatorValue": "3",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C244",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C245",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C247",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C248",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C249",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C251",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C253",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C254",
+                "indicatorValue": "3089",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C255",
+                "indicatorValue": "3077",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C256",
+                "indicatorValue": "12",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C257",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C258",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C259",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C260",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C261",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C264",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C266",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C267",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C268",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C269",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C270",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C271",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C272",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C273",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C276",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C277",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C278",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C279",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C280",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C301",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C303",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C304",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C306",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C307",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C309",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C310",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C311",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C312",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C313",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C316",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C317",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C318",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C319",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C320",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C334",
+                "indicatorValue": "3",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C335",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C341",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C342",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C346",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C347",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C181",
+                "indicatorValue": "336",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_Intra_eNB_HO",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-1,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_Intra_eNB_HO",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8009C6",
+                "indicatorValue": "603",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8009C7",
+                "indicatorValue": "603",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_Cell_Resource",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-1,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_Cell_Resource",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8011C37",
+                "indicatorValue": "347",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8011C24",
+                "indicatorValue": "96",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_Cell_Throughput",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-1,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_Cell_Throughput",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8012C22",
+                "indicatorValue": "45521",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8012C25",
+                "indicatorValue": "95295",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8012C19",
+                "indicatorValue": "647547807",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8012C20",
+                "indicatorValue": "10985971845",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8012C90",
+                "indicatorValue": "1850393",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8012C89",
+                "indicatorValue": "1772672",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_UE_State",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-1,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_UE_State",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8013C5",
+                "indicatorValue": "1722",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C17",
+                "indicatorValue": "67",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C18",
+                "indicatorValue": "504",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C19",
+                "indicatorValue": "1151",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C21",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C30",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C31",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C33",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C34",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C39",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C40",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C41",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C42",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C65",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C66",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C67",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C68",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C91",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C93",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_Inter_eNB_HO",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-1,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_Inter_eNB_HO",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8014C6",
+                "indicatorValue": "1036",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8014C7",
+                "indicatorValue": "1034",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_Cell_Avail",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-1,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_Cell_Avail",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8020C3",
+                "indicatorValue": "3600",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8020C4",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8020C6",
+                "indicatorValue": "3600",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_UE_Quantity",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-1,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_UE_Quantity",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8051C56",
+                "indicatorValue": "102",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8051C58",
+                "indicatorValue": "102",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8051C60",
+                "indicatorValue": "143969",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8051C61",
+                "indicatorValue": "3600",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_RAN_Sharing",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-1,MCCMNC=PLMN-PLMN/MCC-525/MNC-05,CORE_NETWORK_MCC_MNC=PLMN-PLMN/CMCC-525/CMNC-05/LTE_RAN_Sharing",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8038C0",
+                "indicatorValue": "141542",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8038C1",
+                "indicatorValue": "3600",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_Cell_Load",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-2,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_Cell_Load",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8001C8",
+                "indicatorValue": "4097",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8001C6",
+                "indicatorValue": "2680",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8001C7",
+                "indicatorValue": "55",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8001C286",
+                "indicatorValue": "1363",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8001C519",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8001C520",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8001C521",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8001C522",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_EPS_Bearer",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-2,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_EPS_Bearer",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8006C0",
+                "indicatorValue": "4711",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C1",
+                "indicatorValue": "4709",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C6",
+                "indicatorValue": "31",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C7",
+                "indicatorValue": "18",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C8",
+                "indicatorValue": "60",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C9",
+                "indicatorValue": "4",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C89",
+                "indicatorValue": "2",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C98",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C107",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C116",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C188",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C197",
+                "indicatorValue": "4",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C206",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C215",
+                "indicatorValue": "4",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C244",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C245",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C247",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C248",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C249",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C251",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C253",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C254",
+                "indicatorValue": "4645",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C255",
+                "indicatorValue": "4645",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C256",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C257",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C258",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C259",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C260",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C261",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C264",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C266",
+                "indicatorValue": "1",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C267",
+                "indicatorValue": "1",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C268",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C269",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C270",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C271",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C272",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C273",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C276",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C277",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C278",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C279",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C280",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C301",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C303",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C304",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C306",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C307",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C309",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C310",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C311",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C312",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C313",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C316",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C317",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C318",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C319",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C320",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C334",
+                "indicatorValue": "4",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C335",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C341",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C342",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C346",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C347",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8006C181",
+                "indicatorValue": "112",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_Intra_eNB_HO",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-2,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_Intra_eNB_HO",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8009C6",
+                "indicatorValue": "736",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8009C7",
+                "indicatorValue": "736",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_Cell_Resource",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-2,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_Cell_Resource",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8011C37",
+                "indicatorValue": "218",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8011C24",
+                "indicatorValue": "83",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_Cell_Throughput",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-2,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_Cell_Throughput",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8012C22",
+                "indicatorValue": "36894",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8012C25",
+                "indicatorValue": "79719",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8012C19",
+                "indicatorValue": "657995062",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8012C20",
+                "indicatorValue": "5003521022",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8012C90",
+                "indicatorValue": "1378716",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8012C89",
+                "indicatorValue": "1734023",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_UE_State",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-2,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_UE_State",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8013C5",
+                "indicatorValue": "2596",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C17",
+                "indicatorValue": "151",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C18",
+                "indicatorValue": "817",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C19",
+                "indicatorValue": "1628",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C21",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C30",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C31",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C33",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C34",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C39",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C40",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C41",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C42",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C65",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C66",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C67",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C68",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C91",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8013C93",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_Inter_eNB_HO",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-2,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_Inter_eNB_HO",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8014C6",
+                "indicatorValue": "528",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8014C7",
+                "indicatorValue": "528",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_Cell_Avail",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-2,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_Cell_Avail",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8020C3",
+                "indicatorValue": "3600",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8020C4",
+                "indicatorValue": "0",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8020C6",
+                "indicatorValue": "3600",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_UE_Quantity",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-2,MCCMNC=PLMN-PLMN/MCC-525/MNC-05/LTE_UE_Quantity",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8051C56",
+                "indicatorValue": "64",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8051C58",
+                "indicatorValue": "64",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8051C60",
+                "indicatorValue": "133075",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8051C61",
+                "indicatorValue": "3600",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    },
+    {
+        "deviceName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680",
+        "objectType": "LTE_RAN_Sharing",
+        "objectName": "PLMN-PLMN/MRBTS-61680/LNBTS-61680/LNCEL-2,MCCMNC=PLMN-PLMN/MCC-525/MNC-05,CORE_NETWORK_MCC_MNC=PLMN-PLMN/CMCC-525/CMNC-05/LTE_RAN_Sharing",
+        "granPeriodEndTime": 1749733200,
+        "measResults": [
+            {
+                "indicatorName": "M8038C0",
+                "indicatorValue": "130493",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            },
+            {
+                "indicatorName": "M8038C1",
+                "indicatorValue": "3600",
+                "indicatorFormat": "metric.MetricFormat.GAUGE",
+                "indicatorUnit": "Number"
+            }
+        ]
+    }
+]

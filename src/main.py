@@ -99,18 +99,27 @@ def process_folder_multithreaded(SevOne_appliance_obj, folder_path, archive_dir,
     json_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.json')]
     logger.info(f"Found {len(json_files)} files")
 
-    file_batches = list(chunk_list(json_files, batch_size))
+    #file_batches = list(chunk_list(json_files, batch_size))
     futures = []
     with ThreadPoolExecutor(max_workers=max_threads) as executor:
-        '''
-        for file_path in json_files:
-            # Submit process_file, which itself submits more tasks
-            logger.info(f"Processing file: {file_path}")
-            executor.submit(process_file, file_path, archive_dir, SevOne_appliance_obj)
+        
+        
+        # Submit process_file, which itself submits more tasks
+        #logger.info(f"Processing file: {file}")
+        future_to_file = {executor.submit(process_file, file, archive_dir, SevOne_appliance_obj): file for file in json_files}
+        for future in as_completed(future_to_file):
+            file = future_to_file[future]
+            try:
+                result = future.result()
+                logger.info(f"Ingested {file} successfully.")
+            except Exception as e:
+                logger.debug(f"Error processing {file}: {e}")
+
         '''
         for batch in file_batches:
             future = executor.submit(process_file_batch, batch, archive_dir, SevOne_appliance_obj)
             futures.append(future)
+       
 
         # Wait for all batches to finish
         for future in as_completed(futures):
@@ -118,7 +127,7 @@ def process_folder_multithreaded(SevOne_appliance_obj, folder_path, archive_dir,
                 future.result()  # This raises any exceptions if occurred
             except Exception as e:
                 logger.error(f"Batch failed with error: {e}")
-
+         '''
 if __name__ == '__main__':
     try:
 
@@ -127,7 +136,7 @@ if __name__ == '__main__':
         loop_start = int(time.time())
 
         
-        file_prefix = "/app/"
+        file_prefix = ""
         #configurationFile = "/opt/IBM/expert-labs/el-proj-templates/etc/config.json"
         #keyFile = "/opt/IBM/expert-labs/el-proj-templates/env/key.txt"
         configurationFile = file_prefix + "etc/config.json"
