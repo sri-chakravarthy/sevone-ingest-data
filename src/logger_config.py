@@ -6,7 +6,7 @@ from logging.handlers import RotatingFileHandler, TimedRotatingFileHandler
 import json
 
 # Create a logger
-file_prefix = ""
+file_prefix = "/app/"
 #file_prefix = ""
 configurationFile = file_prefix + "etc/config.json"
 with open(configurationFile, "r") as f:

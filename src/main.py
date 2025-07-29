@@ -136,7 +136,7 @@ if __name__ == '__main__':
         loop_start = int(time.time())
 
         
-        file_prefix = ""
+        file_prefix = "/app/"
         #configurationFile = "/opt/IBM/expert-labs/el-proj-templates/etc/config.json"
         #keyFile = "/opt/IBM/expert-labs/el-proj-templates/env/key.txt"
         configurationFile = file_prefix + "etc/config.json"
